@@ -1,8 +1,10 @@
 ﻿Console.WriteLine("Hello, Everyone!");
 
-Console.WriteLine("Please enter your name: ");
+// Taking first and last name from user as input
+Console.WriteLine("Please enter your first name: ");
+string firstName = Console.ReadLine();
 
-// Taking input from user
-string? name = Console.ReadLine();
+Console.WriteLine("Please enter your last name: ");
+string lastName = Console.ReadLine();
 
-Console.WriteLine("Hello, " + name);
+Console.WriteLine("Hello, " + firstName + " " + lastName);
