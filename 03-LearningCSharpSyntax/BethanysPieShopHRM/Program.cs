@@ -103,16 +103,49 @@
 // int
 // ###########################################################################################
 
-int intMaxValue = int.MaxValue;
-Console.WriteLine(intMaxValue);
-int intMinValue = int.MinValue;
-Console.WriteLine(intMinValue);
+//int intMaxValue = int.MaxValue;
+//Console.WriteLine(intMaxValue);
+//int intMinValue = int.MinValue;
+//Console.WriteLine(intMinValue);
 
 // char
 // ###########################################################################################
 
-char userSelection = 'a';
-char upperVersion = char.ToUpper(userSelection);
+//char userSelection = 'a';
+//char upperVersion = char.ToUpper(userSelection);
 
-bool isDigit = char.IsDigit(upperVersion);
-bool isLetter = char.IsLetter(upperVersion);
+//bool isDigit = char.IsDigit(upperVersion);
+//bool isLetter = char.IsLetter(upperVersion);
+
+// *) Working with DateTime
+// ###########################################################################################
+
+DateTime hireDate = new DateTime(2024, 1, 1, 12, 0, 0, 0);
+Console.WriteLine("hireDate: " + hireDate.ToString());
+
+DateTime endDate = new DateTime(2024, 2, 18);
+Console.WriteLine("endDate: " + endDate.ToString());
+
+DateTime startDate = hireDate.AddDays(15);
+Console.WriteLine("startDate: " + startDate.ToString());
+
+DateTime currentDate = DateTime.Now;
+Console.WriteLine("currentDate: " + currentDate.ToString());
+
+// Timestamp
+// ###########################################################################################
+
+DateTime startHour = DateTime.Now;
+Console.WriteLine("startHour: " + startHour);
+
+TimeSpan workTime = new TimeSpan(9, 45, 0);
+Console.WriteLine("workTime: " + workTime);
+
+DateTime endHour = startHour.Add(workTime);
+Console.WriteLine("endHour: " + endHour);
+
+// Date time representation
+// ###########################################################################################
+
+Console.WriteLine("Long date: " + endHour.ToLongDateString());
+Console.WriteLine("Short time: " + endHour.ToShortTimeString());
