@@ -43,3 +43,10 @@ double rating = 4.93;
 
 // Type safety; Once a variable is declared its type can not be changed
 // isActive = "false";
+
+// Using const values
+// ###########################################################################################
+
+const double interestRate = 0.07; // OR const decimal interestRate = 0.07m;
+
+//interestRate = 0.06; // Error
