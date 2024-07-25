@@ -161,3 +161,12 @@ Console.WriteLine("doubleNumber: " + doubleNumber);
 
 int intToDouble = (int)doubleNumber; // Can not be converted implicitly because int < double. Explicit conversion is done using type cast operator
 Console.WriteLine("intToDouble: " + intToDouble);
+
+// *) Using var
+// ###########################################################################################
+
+Console.WriteLine("*) Using var");
+Console.WriteLine("// ###########################################################################################");
+
+var number = 1;
+var dateTime = DateTime.Now;
