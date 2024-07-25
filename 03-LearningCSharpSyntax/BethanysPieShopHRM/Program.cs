@@ -149,3 +149,15 @@ Console.WriteLine("endHour: " + endHour);
 
 Console.WriteLine("Long date: " + endHour.ToLongDateString());
 Console.WriteLine("Short time: " + endHour.ToShortTimeString());
+
+// *) Converting Between Types
+// ###########################################################################################
+
+int numberOfHoursWorked = 165;
+long veryLongNumber = numberOfHoursWorked; // No errors will thrown by compile during implicit conversion, long > int
+
+double doubleNumber = 9999999.9;
+Console.WriteLine("doubleNumber: " + doubleNumber);
+
+int intToDouble = (int)doubleNumber; // Can not be converted implicitly because int < double. Explicit conversion is done using type cast operator
+Console.WriteLine("intToDouble: " + intToDouble);
