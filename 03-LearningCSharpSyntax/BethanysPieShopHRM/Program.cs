@@ -21,104 +21,133 @@
 // Single statement comment
 
 /*
- * Multiline comments
- * ....
+* Multiline comments
+* ....
 */
 
-// Primitive Types
+// *) Working with Primitive Types
 // ###########################################################################################
 
-// 32-bit signed integer
-//int monthlyWage = 400;
-//int month = 3, bonus = 300;
-
-// bool
-//bool isActive = true;
-
-// byte 8-bit unsigned integer
-//byte numberOfEmployees = 255;
-
-// double
-//double rating = 4.93;
-
-// Type safety; Once a variable is declared its type can not be changed
-// isActive = "false";
-
-// Using const values
-// ###########################################################################################
-
-//const double interestRate = 0.07; // OR const decimal interestRate = 0.07m;
-
-//interestRate = 0.06; // Error
-
-// Creating strings
-// ###########################################################################################
-
-//string firstName = "John";
-//string lastName = "Doe";
-//string emptyString = "";
-
-//Console.WriteLine("Please enter your name: ");
-//string name = Console.ReadLine();
-
-// *) Using Operators in C#
-// ###########################################################################################
-
-// Arithmetic Operators
-// ###########################################################################################
-
-//int bonus = 1000;
-//int numberOfHoursWorked = 165;
-//double ratePerHour = 12.34;
-
-//double currentMonthWage = numberOfHoursWorked * ratePerHour + bonus;
-//Console.WriteLine(currentMonthWage);
-
-// Compound Operator
-// ###########################################################################################
-
-//currentMonthWage += 3; // Same as currentMonthWage = currentMonthWage + 3
-//Console.WriteLine(currentMonthWage);
-
-// Comparison Operator
-// ###########################################################################################
-
-//if (currentMonthWage > 2000)
-//    Console.WriteLine("Top Employee!");
-
-// Increment/Decrement Operator
-// ###########################################################################################
-
-//currentMonthWage++; // Similarly currentMonthWage--
-
-// Default values of Primitive types
-// ###########################################################################################
-
-//int a; // 0
-//bool b; // false
-
-// *) Working with Members on Primitive Types
-// ###########################################################################################
+Console.WriteLine();
+Console.WriteLine("*) Working with Primitive Types");
+Console.WriteLine("########################");
+Console.WriteLine();
 
 // int
 // ###########################################################################################
 
-//int intMaxValue = int.MaxValue;
-//Console.WriteLine(intMaxValue);
-//int intMinValue = int.MinValue;
-//Console.WriteLine(intMinValue);
+int monthlyWage = 400;
+int month = 3, bonus = 300;
+
+// bool
+// ###########################################################################################
+
+bool isActive = true;
+// isActive = "false"; // Type safety; Once a variable is declared its type can not be changed
+
+// byte
+// ###########################################################################################
+
+byte numberOfEmployees = 255;
+
+// double
+// ###########################################################################################
+
+double rating = 4.93;
+
+// const
+// ###########################################################################################
+
+const double interestRate = 0.07; // OR const decimal interestRate = 0.07m;
+//interestRate = 0.06; // Error
+
+// string
+// ###########################################################################################
+
+string firstName = "John";
+string lastName = "Doe";
+string emptyString = "";
+
+Console.WriteLine("Please enter your name: ");
+string name = Console.ReadLine();
+Console.WriteLine("name: " + name);
+
+// *) Using Operators in C#
+// ###########################################################################################
+
+Console.WriteLine();
+Console.WriteLine("*) Using Operators in C#");
+Console.WriteLine("########################");
+Console.WriteLine();
+
+// Arithmetic Operators
+// ###########################################################################################
+
+int hoursWorked = 165;
+double ratePerHour = 12.34;
+
+double currentMonthWage = hoursWorked * ratePerHour + bonus;
+Console.WriteLine("currentMonthWage: " + currentMonthWage);
+
+// Compound Operator
+// ###########################################################################################
+
+currentMonthWage += 3; // Same as currentMonthWage = currentMonthWage + 3
+Console.WriteLine("currentMonthWage += 3: " + currentMonthWage);
+
+// Comparison Operator
+// ###########################################################################################
+
+if (currentMonthWage > 2000)
+    Console.WriteLine("Top Employee!");
+
+// Increment/Decrement Operator
+// ###########################################################################################
+
+currentMonthWage++; // Similarly currentMonthWage--
+Console.WriteLine("currentMonthWage++: " + currentMonthWage);
+
+// Default values of Primitive types
+// ###########################################################################################
+
+int a; // Default: 0
+
+bool b; // Default: false
+
+
+// *) Working with Members on Primitive Types
+// ###########################################################################################
+
+Console.WriteLine();
+Console.WriteLine("*) Working with Members on Primitive Types");
+Console.WriteLine("##########################################");
+Console.WriteLine();
+
+// int
+// ###########################################################################################
+
+int intMaxValue = int.MaxValue;
+Console.WriteLine("intMaxValue: " + intMaxValue);
+int intMinValue = int.MinValue;
+Console.WriteLine("intMaxValue: " + intMinValue);
 
 // char
 // ###########################################################################################
 
-//char userSelection = 'a';
-//char upperVersion = char.ToUpper(userSelection);
+char userSelection = 'a';
+char upperVersion = char.ToUpper(userSelection);
 
-//bool isDigit = char.IsDigit(upperVersion);
-//bool isLetter = char.IsLetter(upperVersion);
+bool isDigit = char.IsDigit(upperVersion);
+bool isLetter = char.IsLetter(upperVersion);
 
 // *) Working with DateTime
 // ###########################################################################################
+
+Console.WriteLine();
+Console.WriteLine("*) Working with DateTime");
+Console.WriteLine("########################");
+Console.WriteLine();
+
 
 DateTime hireDate = new DateTime(2024, 1, 1, 12, 0, 0, 0);
 Console.WriteLine("hireDate: " + hireDate.ToString());
@@ -153,6 +182,11 @@ Console.WriteLine("Short time: " + endHour.ToShortTimeString());
 // *) Converting Between Types
 // ###########################################################################################
 
+Console.WriteLine();
+Console.WriteLine("*) Converting Between Types");
+Console.WriteLine("###########################");
+Console.WriteLine();
+
 int numberOfHoursWorked = 165;
 long veryLongNumber = numberOfHoursWorked; // No errors will thrown by compile during implicit conversion, long > int
 
@@ -165,8 +199,10 @@ Console.WriteLine("intToDouble: " + intToDouble);
 // *) Using var
 // ###########################################################################################
 
+Console.WriteLine();
 Console.WriteLine("*) Using var");
-Console.WriteLine("// ###########################################################################################");
+Console.WriteLine("############");
+Console.WriteLine();
 
 var number = 1;
 var dateTime = DateTime.Now;
