@@ -67,32 +67,52 @@
 // Arithmetic Operators
 // ###########################################################################################
 
-int bonus = 1000;
-int numberOfHoursWorked = 165;
-double ratePerHour = 12.34;
+//int bonus = 1000;
+//int numberOfHoursWorked = 165;
+//double ratePerHour = 12.34;
 
-double currentMonthWage = numberOfHoursWorked * ratePerHour + bonus;
-Console.WriteLine(currentMonthWage);
+//double currentMonthWage = numberOfHoursWorked * ratePerHour + bonus;
+//Console.WriteLine(currentMonthWage);
 
 // Compound Operator
 // ###########################################################################################
 
-currentMonthWage += 3; // Same as currentMonthWage = currentMonthWage + 3
-Console.WriteLine(currentMonthWage);
+//currentMonthWage += 3; // Same as currentMonthWage = currentMonthWage + 3
+//Console.WriteLine(currentMonthWage);
 
 // Comparison Operator
 // ###########################################################################################
 
-if (currentMonthWage > 2000)
-    Console.WriteLine("Top Employee!");
+//if (currentMonthWage > 2000)
+//    Console.WriteLine("Top Employee!");
 
 // Increment/Decrement Operator
 // ###########################################################################################
 
-currentMonthWage++; // Similarly currentMonthWage--
+//currentMonthWage++; // Similarly currentMonthWage--
 
 // Default values of Primitive types
 // ###########################################################################################
 
-int a; // 0
-bool b; // false
+//int a; // 0
+//bool b; // false
+
+// *) Working with Members on Primitive Types
+// ###########################################################################################
+
+// int
+// ###########################################################################################
+
+int intMaxValue = int.MaxValue;
+Console.WriteLine(intMaxValue);
+int intMinValue = int.MinValue;
+Console.WriteLine(intMinValue);
+
+// char
+// ###########################################################################################
+
+char userSelection = 'a';
+char upperVersion = char.ToUpper(userSelection);
+
+bool isDigit = char.IsDigit(upperVersion);
+bool isLetter = char.IsLetter(upperVersion);
