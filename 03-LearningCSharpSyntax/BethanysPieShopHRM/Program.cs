@@ -50,3 +50,13 @@ double rating = 4.93;
 const double interestRate = 0.07; // OR const decimal interestRate = 0.07m;
 
 //interestRate = 0.06; // Error
+
+// Creating strings
+// ###########################################################################################
+
+string firstName = "John";
+string lastName = "Doe";
+string emptyString = "";
+
+Console.WriteLine("Please enter your name: ");
+string name = Console.ReadLine();
