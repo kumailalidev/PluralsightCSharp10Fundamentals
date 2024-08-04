@@ -77,16 +77,16 @@ switch (age4)
 
 // Example 2
 
-Console.WriteLine("\nChoose the action you want to do: ");
-Console.WriteLine("1. Add employee");
-Console.WriteLine("2. Update employee");
-Console.WriteLine("3. Delete employee");
-Console.WriteLine("99. Exit Application");
-
-string selectedAction = Console.ReadLine();
-
-while (selectedAction != "99")
+string selectedAction = string.Empty;
+do // Code is executed first, condition is checked after
 {
+    Console.WriteLine("\nChoose the action you want to do: ");
+    Console.WriteLine("1. Add employee");
+    Console.WriteLine("2. Update employee");
+    Console.WriteLine("3. Delete employee");
+    Console.WriteLine("99. Exit Application");
+    selectedAction = Console.ReadLine();
+
     switch (selectedAction)
     {
         case "1":
@@ -102,15 +102,8 @@ while (selectedAction != "99")
             Console.WriteLine("Invalid input");
             break;
     }
+} while (selectedAction != "99");
 
-    Console.WriteLine("\nChoose the action you want to do: ");
-    Console.WriteLine("1. Add employee");
-    Console.WriteLine("2. Update employee");
-    Console.WriteLine("3. Delete employee");
-    Console.WriteLine("99. Exit Application");
-
-    selectedAction = Console.ReadLine();
-}
 Console.WriteLine("Closing Application...");
 
 Console.WriteLine();
@@ -124,7 +117,7 @@ Console.WriteLine("Enter a value: ");
 int max = int.Parse(Console.ReadLine());
 
 int i = 0;
-while (i < max) // Condition is checked before executing
+while (i < max) // Condition is checked before execution
 {
     Console.WriteLine(i);
     i++;
@@ -150,3 +143,28 @@ while (i < 10)
 // Infinite loop
 //while (true)
 //    Console.WriteLine(DateTime.Now);
+
+Console.WriteLine();
+Console.WriteLine("More Loops");
+Console.WriteLine("###########################################################################################");
+Console.WriteLine();
+
+int x = 0;
+while (x < max) // Condition is checked before execution
+{
+    Console.WriteLine(x);
+    x++;
+}
+Console.WriteLine($"while loop finished, value is {x}");
+
+// for loop
+for (int k = 0; k < max; k++) // Condition is checked after executing loop body
+{
+    if (k == 5)
+    {
+        Console.WriteLine("Bingo! " + k + " was found!");
+        continue; // Skips remaining body of loop and go to start of the loop
+        // break; // Executing of loop will be stopped
+    }
+    Console.WriteLine(k); // 5 wont be printed to console 
+}
