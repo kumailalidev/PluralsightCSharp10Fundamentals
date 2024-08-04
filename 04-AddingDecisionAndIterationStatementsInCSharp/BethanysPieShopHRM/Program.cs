@@ -53,3 +53,49 @@ if (today.Date.Day == 20)
 else if (today.Date.Day >= 25 && !endOfMonthPaymentStarted)
     Console.WriteLine("Payments will be late");
 // else isn't required
+
+Console.WriteLine();
+Console.WriteLine("Using the switch Statement");
+Console.WriteLine("###########################################################################################");
+Console.WriteLine();
+
+// Example 1
+
+switch (age4)
+{
+    case < 18:
+    case > 65:
+        Console.WriteLine("Sorry, your age is not within the range we are looking for");
+        break;
+    case 23:
+        Console.WriteLine("Wow, exactly what we are looking for");
+        break;
+    default:
+        Console.WriteLine("Great, you can now start with the application!");
+        break;
+}
+
+// Example 2
+
+Console.WriteLine("\nChoose the action you want to do: ");
+Console.WriteLine("1. Add employee");
+Console.WriteLine("2. Update employee");
+Console.WriteLine("3. Delete employee");
+
+string selectedAction = Console.ReadLine();
+
+switch (selectedAction)
+{
+    case "1":
+        Console.WriteLine("Adding a new employee");
+        break;
+    case "2":
+        Console.WriteLine("Updating employee");
+        break;
+    case "3":
+        Console.WriteLine("Deleting employee");
+        break;
+    default:
+        Console.WriteLine("Invalid input");
+        break;
+}
