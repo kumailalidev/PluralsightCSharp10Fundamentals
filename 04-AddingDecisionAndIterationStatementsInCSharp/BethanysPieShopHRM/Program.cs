@@ -81,21 +81,72 @@ Console.WriteLine("\nChoose the action you want to do: ");
 Console.WriteLine("1. Add employee");
 Console.WriteLine("2. Update employee");
 Console.WriteLine("3. Delete employee");
+Console.WriteLine("99. Exit Application");
 
 string selectedAction = Console.ReadLine();
 
-switch (selectedAction)
+while (selectedAction != "99")
 {
-    case "1":
-        Console.WriteLine("Adding a new employee");
-        break;
-    case "2":
-        Console.WriteLine("Updating employee");
-        break;
-    case "3":
-        Console.WriteLine("Deleting employee");
-        break;
-    default:
-        Console.WriteLine("Invalid input");
-        break;
+    switch (selectedAction)
+    {
+        case "1":
+            Console.WriteLine("Adding a new employee");
+            break;
+        case "2":
+            Console.WriteLine("Updating employee");
+            break;
+        case "3":
+            Console.WriteLine("Deleting employee");
+            break;
+        default:
+            Console.WriteLine("Invalid input");
+            break;
+    }
+
+    Console.WriteLine("\nChoose the action you want to do: ");
+    Console.WriteLine("1. Add employee");
+    Console.WriteLine("2. Update employee");
+    Console.WriteLine("3. Delete employee");
+    Console.WriteLine("99. Exit Application");
+
+    selectedAction = Console.ReadLine();
 }
+Console.WriteLine("Closing Application...");
+
+Console.WriteLine();
+Console.WriteLine("Creating a while Loop");
+Console.WriteLine("###########################################################################################");
+Console.WriteLine();
+
+// Example
+
+Console.WriteLine("Enter a value: ");
+int max = int.Parse(Console.ReadLine());
+
+int i = 0;
+while (i < max) // Condition is checked before executing
+{
+    Console.WriteLine(i);
+    i++;
+}
+Console.WriteLine("Loop finished!");
+
+// Nested Loop
+
+i = 0;
+int j = 0;
+
+while (i < 10)
+{
+    while (j < 10)
+    {
+        Console.WriteLine("i: " + i + " " + "j: " + j);
+        j++;
+    }
+    j = 0;
+    i++;
+}
+
+// Infinite loop
+//while (true)
+//    Console.WriteLine(DateTime.Now);
