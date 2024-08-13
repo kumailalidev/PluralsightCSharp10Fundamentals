@@ -14,5 +14,19 @@
 
             return monthlyWage * numberOfMonthsWorked;
         }
+
+        // Method Overloading
+        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, int bonus)
+        {
+            Console.WriteLine($"Your yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
+            return monthlyWage * numberOfMonthsWorked + bonus;
+        }
+
+        // Method Overloading
+        public static double CalculateYearlyWage(double monthlyWage, double numberOfMonthsWorked, double bonus)
+        {
+            Console.WriteLine($"Your yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
+            return monthlyWage * numberOfMonthsWorked + bonus;
+        }
     }
 }
