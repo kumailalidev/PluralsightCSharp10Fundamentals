@@ -24,3 +24,9 @@ double monthsDouble = 12;
 double bonusDouble = 1000;
 
 double yearlyWageWithBonusDouble = Utilities.CalculateYearlyWage(amountDouble, monthsDouble, bonusDouble);
+
+Console.WriteLine("\nUsing Optional Parameters and Named Arguments");
+Console.WriteLine("###########################################################################################\n");
+
+Utilities.UsingOptionalParameters();
+Utilities.UsingNamedArguments();
