@@ -45,6 +45,7 @@
             Console.WriteLine($"Yearly wage for employee 1 (Bethany): {yearlyWageForEmployee1}");
         }
 
+        // Using named arguments
         public static int CalculateYearlyWageWithNamed(int monthlyWage, int numberOfMonthsWorked, int bonus)
         {
             Console.WriteLine($"Your yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
@@ -58,6 +59,20 @@
             int bonus = 500;
 
             int yearlyWageForEmployee = CalculateYearlyWageWithOptional(bonus: bonus, monthlyWage: amount, numberOfMonthsWorked: months);
+
+            Console.WriteLine($"Yearly wage for employee (Bethany): {yearlyWageForEmployee}");
+        }
+
+        // Expression-bodied syntax
+        public static int CalculateYearlyWageExpressionBodied(int monthlyWage, int numberOfMonthsWorked, int bonus) => monthlyWage * numberOfMonthsWorked + bonus;
+
+        public static void UsingExpressionBodiedSyntax()
+        {
+            int amount = 1234;
+            int months = 12;
+            int bonus = 500;
+
+            int yearlyWageForEmployee = CalculateYearlyWageExpressionBodied(amount, months, bonus);
 
             Console.WriteLine($"Yearly wage for employee (Bethany): {yearlyWageForEmployee}");
         }
